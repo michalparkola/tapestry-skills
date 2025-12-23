@@ -1,5 +1,8 @@
 # Tapestry Skills for Claude Code
 
+[![Run in Smithery](https://smithery.ai/badge/skills/michalparkola)](https://smithery.ai/skills?ns=michalparkola&utm_source=github&utm_medium=badge)
+
+
 A collection of productivity skills for [Claude Code](https://claude.com/claude-code) that help you work faster and learn better.
 
 **Tapestry weaves learning content into action.** Extract any content (YouTube, articles, PDFs) and automatically create implementation plans.
