@@ -1,8 +1,8 @@
-# Tapestry Skills for Claude Code
+# Tapestry Skills for AI Agents
 
-A collection of productivity skills for [Claude Code](https://claude.com/claude-code) that help you work faster and learn better.
+A collection of productivity skills for AI agents like [Claude Code](https://claude.com/claude-code) that help you work faster and learn better.
 
-**Tapestry weaves learning content into action.** Extract any content (YouTube, articles, PDFs) and automatically create implementation plans.
+Are you a founder of a tech company? Check out [Tapestry](https://GrowWithTapestry.com) – the AI planning partner that helps everyone on your team make better decisions faster.
 
 ## Skills Included
 
@@ -45,7 +45,26 @@ Extract clean, readable content from web articles and blog posts, removing ads, 
 - Archive important blog posts
 - Get clean text without distractions
 
-### 3. Ship-Learn-Next Action Planner
+### 3. Scrum Sage
+AI-powered Scrum Master and Enterprise Agility Coach based on Jeff Sutherland, Taiichi Ohno, and First Principles thinking.
+
+**Features:**
+- Sprint analysis (basic and expert modes)
+- Backlog refinement and story sizing guidance
+- Anti-pattern detection and impediment radar
+- Flow efficiency and cognitive load analysis
+- Scrum@Scale advice for growing organizations
+- Retrospective synthesis and predictive modeling
+
+**Use cases:**
+- Get coaching on Scrum mechanics, ceremonies, and artifacts
+- Analyze sprint health, velocity trends, and predictability
+- Remove impediments and detect systemic bottlenecks
+- Plan scaling strategy (with Scrum@Scale, not SAFe)
+- Facilitate retrospectives and backlog refinement
+- Optimize team dynamics and sustainable pace
+
+### 4. Ship-Learn-Next Action Planner
 Transform passive learning content (transcripts, articles, tutorials) into actionable implementation plans using the Ship-Learn-Next framework.
 
 **Features:**
@@ -63,7 +82,7 @@ Transform passive learning content (transcripts, articles, tutorials) into actio
 
 ## Installation
 
-### Quick Install (Recommended)
+### Quick Install for Claude Code
 
 ```bash
 # Clone the repository
@@ -88,6 +107,7 @@ cp -r tapestry ~/.claude/skills/
 cp -r youtube-transcript ~/.claude/skills/
 cp -r article-extractor ~/.claude/skills/
 cp -r ship-learn-next ~/.claude/skills/
+cp -r scrum-sage ~/.claude/skills/
 ```
 
 #### Option 2: Project Skills (Only in specific project)
@@ -101,6 +121,7 @@ cp -r /path/to/tapestry-skills-for-claude-code/tapestry .claude/skills/
 cp -r /path/to/tapestry-skills-for-claude-code/youtube-transcript .claude/skills/
 cp -r /path/to/tapestry-skills-for-claude-code/article-extractor .claude/skills/
 cp -r /path/to/tapestry-skills-for-claude-code/ship-learn-next .claude/skills/
+cp -r /path/to/tapestry-skills-for-claude-code/scrum-sage .claude/skills/
 ```
 
 ## Usage
@@ -156,6 +177,24 @@ The skill will:
 3. Remove ads, navigation, and clutter
 4. Save as plain text with article title as filename
 5. Show preview of extracted content
+
+### Scrum Sage
+
+Claude will activate this skill when you ask about Scrum, agile coaching, or team performance:
+
+```
+"Help me plan our next sprint"
+"Analyze our team's velocity trend"
+"We keep missing sprint goals — what's wrong?"
+"How should we scale from 2 to 5 teams?"
+```
+
+The skill will:
+1. Assess your situation with targeted clarifying questions
+2. Provide analysis grounded in Scrum mechanics and First Principles
+3. Detect anti-patterns and surface hidden impediments
+4. Recommend concrete experiments (not mandates)
+5. Offer sprint health dashboards, flow maps, or retrospective synthesis as needed
 
 ### Ship-Learn-Next Action Planner
 

@@ -92,6 +92,23 @@ else
     echo "✓ Installed ship-learn-next skill"
 fi
 
+# Install scrum-sage skill
+if [ -d "$SKILLS_DIR/scrum-sage" ]; then
+    echo "⚠️  scrum-sage skill already exists"
+    read -p "   Overwrite? (y/n) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        rm -rf "$SKILLS_DIR/scrum-sage"
+        cp -r "$SCRIPT_DIR/scrum-sage" "$SKILLS_DIR/"
+        echo "   ✓ Updated scrum-sage skill"
+    else
+        echo "   ⏭️  Skipped scrum-sage skill"
+    fi
+else
+    cp -r "$SCRIPT_DIR/scrum-sage" "$SKILLS_DIR/"
+    echo "✓ Installed scrum-sage skill"
+fi
+
 echo ""
 echo "=============================================="
 echo "✅ Installation complete!"
@@ -103,6 +120,7 @@ echo "  - tapestry: 🌟 Unified workflow (extract + plan)"
 echo "  - youtube-transcript: Download YouTube transcripts"
 echo "  - article-extractor: Extract clean article content"
 echo "  - ship-learn-next: Turn content into action plans"
+echo "  - scrum-sage: AI Scrum Master & agile coaching"
 echo ""
 echo "🚀 Usage:"
 echo "  Open Claude Code and start using the skills!"
