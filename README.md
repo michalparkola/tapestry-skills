@@ -7,12 +7,13 @@ Are you a founder of a tech company? Check out [Tapestry](https://GrowWithTapest
 | Skill | What it does |
 |-------|-------------|
 | [Learn This](#0-learn-this-) | One command to extract content from any URL and turn it into an action plan. |
+| [Ship-Learn-Next](#6-ship-learn-next-action-planner) | Transform learning content into a 5-rep action plan you can ship. |
 | [YouTube Transcript](#1-youtube-transcript-downloader) | Download and clean YouTube video transcripts with deduplication. |
 | [Article Extractor](#2-article-extractor) | Extract clean, readable text from web articles and blog posts. |
 | [Scrum Sage](#3-scrum-sage) | AI Scrum Master and agile coach grounded in Sutherland, Ohno, and First Principles. |
 | [Session Log](#4-session-log) | Summarize your session and append it to a weekly agent-log file. |
 | [Unblock Action](#5-unblock-action) | Turn a vague stuck task into a concrete next action in under 2 minutes. |
-| [Ship-Learn-Next](#6-ship-learn-next-action-planner) | Transform learning content into a 5-rep action plan you can ship. |
+
 
 ## Skills Included
 
