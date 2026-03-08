@@ -168,7 +168,7 @@ yt-dlp --print "%(title)s" "YOUTUBE_URL"
 Use this to create meaningful filenames based on the video title. Clean the title for filesystem compatibility:
 - Replace `/` with `-`
 - Replace special characters that might cause issues
-- Consider using sanitized version: `$(yt-dlp --print "%(title)s" "URL" | tr '/' '-' | tr ':' '-')`
+- Consider using sanitized version: `$(yt-dlp --print "%(title)s" "URL" | sed 's/[^a-zA-Z0-9 ._-]/_/g')`
 
 ## Post-Processing
 
@@ -196,7 +196,7 @@ with open('transcript.en.vtt', 'r') as f:
 
 ```bash
 # Get video title
-VIDEO_TITLE=$(yt-dlp --print "%(title)s" "YOUTUBE_URL" | tr '/' '_' | tr ':' '-' | tr '?' '' | tr '"' '')
+VIDEO_TITLE=$(yt-dlp --print "%(title)s" "YOUTUBE_URL" | sed 's/[^a-zA-Z0-9 ._-]/_/g')
 
 # Find the VTT file
 VTT_FILE=$(ls *.vtt | head -n 1)
@@ -205,7 +205,7 @@ VTT_FILE=$(ls *.vtt | head -n 1)
 python3 -c "
 import sys, re
 seen = set()
-with open('$VTT_FILE', 'r') as f:
+with open(sys.argv[1], 'r') as f:
     for line in f:
         line = line.strip()
         if line and not line.startswith('WEBVTT') and not line.startswith('Kind:') and not line.startswith('Language:') and '-->' not in line:
@@ -214,7 +214,7 @@ with open('$VTT_FILE', 'r') as f:
             if clean and clean not in seen:
                 print(clean)
                 seen.add(clean)
-" > "${VIDEO_TITLE}.txt"
+" "$VTT_FILE" > "${VIDEO_TITLE}.txt"
 
 echo "✓ Saved to: ${VIDEO_TITLE}.txt"
 
@@ -241,7 +241,7 @@ echo "✓ Cleaned up temporary VTT file"
 VIDEO_URL="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
 # Get video title for filename
-VIDEO_TITLE=$(yt-dlp --print "%(title)s" "$VIDEO_URL" | tr '/' '_' | tr ':' '-' | tr '?' '' | tr '"' '')
+VIDEO_TITLE=$(yt-dlp --print "%(title)s" "$VIDEO_URL" | sed 's/[^a-zA-Z0-9 ._-]/_/g')
 OUTPUT_NAME="transcript_temp"
 
 # ============================================
@@ -346,7 +346,7 @@ if [ -f "$VTT_FILE" ]; then
     python3 -c "
 import sys, re
 seen = set()
-with open('$VTT_FILE', 'r') as f:
+with open(sys.argv[1], 'r') as f:
     for line in f:
         line = line.strip()
         if line and not line.startswith('WEBVTT') and not line.startswith('Kind:') and not line.startswith('Language:') and '-->' not in line:
@@ -355,7 +355,7 @@ with open('$VTT_FILE', 'r') as f:
             if clean and clean not in seen:
                 print(clean)
                 seen.add(clean)
-" > "${VIDEO_TITLE}.txt"
+" "$VTT_FILE" > "${VIDEO_TITLE}.txt"
     echo "✓ Saved to: ${VIDEO_TITLE}.txt"
 
     # Clean up temporary VTT file
