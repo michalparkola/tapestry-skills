@@ -127,10 +127,10 @@ Transform passive learning content (transcripts, articles, tutorials) into actio
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/tapestry-skills-for-claude-code.git
+git clone https://github.com/michalparkola/tapestry-skills.git
 
 # Run the installation script
-cd tapestry-skills-for-claude-code
+cd tapestry-skills
 chmod +x install.sh
 ./install.sh
 ```
@@ -417,7 +417,7 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ## Support
 
-Having issues? Please [open an issue](https://github.com/yourusername/tapestry-skills-for-claude-code/issues) on GitHub.
+Having issues? Please [open an issue](https://github.com/michalparkola/tapestry-skills/issues) on GitHub.
 
 ---
 
